@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="hu">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" type="text/css" href="../static/main.css" th:href="@{/main.css}"/>
+    <title>Szereplés módosítás</title>
+    <style>
+        #kod {
+            left: 55%;
+            position: absolute;
+        }
+        #helyszin{
+            left: 55%;
+            position: absolute;
+        }
+        #szerzodes_vege {
+            left: 55%;
+            position: absolute;
+        }
+        #fizetes {
+            left: 55%;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+<a href="/szereplesek" class="hiv">
+    Vissza
+</a>
+<div>
+    <h2>Szereplés hozzáadása</h2>
+    <form action="#" th:action="@{/szereplesek/update/{kod}(kod=${szereplesek.kod})}" method="post">
+        <label>Helyszín:</label>
+            <input type="text" name="helyszin" id="helyszin" th:value="${szereplesek.helyszin}"></input>
+        <br>
+        <label>Szerződés vége:  </label>
+            <input type="date" name="szerzodes_vege" id="szerzodes_vege" th:value="${szereplesek.szerzodes_vege}"></input>
+        <br>
+        <label>Fizetés: </label>
+            <input type="number" name="fizetes" id="fizetes" th:value="${szereplesek.fizetes}"></input>
+        <br>  <br>
+
+
+        <input type="submit" value="Megerősít" class="altalanosGomb"></input>
+    </form>
+</div>
+</body>
+</html>

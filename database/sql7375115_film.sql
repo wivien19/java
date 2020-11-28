@@ -1,0 +1,16 @@
+INSERT INTO sql7375115.film (fid, cim, idotartam, eredetinyelv, fkod) VALUES (5, 'A szamolas joga', 20, 'angol', 2);
+INSERT INTO sql7375115.film (fid, cim, idotartam, eredetinyelv, fkod) VALUES (6, 'Legenda vagyok', 50, 'angol', 2);
+INSERT INTO sql7375115.film (fid, cim, idotartam, eredetinyelv, fkod) VALUES (7, 'Instant csalad', 40, 'angol', 3);
+INSERT INTO sql7375115.film (fid, cim, idotartam, eredetinyelv, fkod) VALUES (25, 'Véres Telihold', 121, 'angol', 1);
+INSERT INTO sql7375115.film (fid, cim, idotartam, eredetinyelv, fkod) VALUES (26, 'Egri csillagok', 150, 'magyar', 3);
+INSERT INTO sql7375115.film (fid, cim, idotartam, eredetinyelv, fkod) VALUES (27, 'Fuss', 90, 'angol', 8);
+INSERT INTO sql7375115.film (fid, cim, idotartam, eredetinyelv, fkod) VALUES (28, 'Girl', 130, 'német', 8);
+INSERT INTO sql7375115.film (fid, cim, idotartam, eredetinyelv, fkod) VALUES (29, 'Most van most', 130, 'japán', 7);
+INSERT INTO sql7375115.film (fid, cim, idotartam, eredetinyelv, fkod) VALUES (30, 'Gémerek', 132, 'angol', 9);
+INSERT INTO sql7375115.film (fid, cim, idotartam, eredetinyelv, fkod) VALUES (31, 'Forráspont', 122, 'angol', 9);
+INSERT INTO sql7375115.film (fid, cim, idotartam, eredetinyelv, fkod) VALUES (32, 'Fatman', 123, 'angol', 7);
+INSERT INTO sql7375115.film (fid, cim, idotartam, eredetinyelv, fkod) VALUES (33, 'A szállító', 140, 'angol', 7);
+INSERT INTO sql7375115.film (fid, cim, idotartam, eredetinyelv, fkod) VALUES (34, 'A szállító 2', 135, 'angol', 7);
+INSERT INTO sql7375115.film (fid, cim, idotartam, eredetinyelv, fkod) VALUES (35, 'A szállító 3', 136, 'angol', 7);
+INSERT INTO sql7375115.film (fid, cim, idotartam, eredetinyelv, fkod) VALUES (36, 'Király!', 15, 'magyar', 3);
+INSERT INTO sql7375115.film (fid, cim, idotartam, eredetinyelv, fkod) VALUES (37, 'Lorax', 80, 'francia', 3);

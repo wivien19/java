@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" type="text/css" href="../static/main.css" th:href="@{/main.css}"/>
+    <meta charset="UTF-8">
+    <title>Játszik</title>
+</head>
+<body>
+<h1>Játszik</h1>
+<a href="/" >
+    <img src="../static/images/logo.jpg"  width="60"  th:src="@{kepek/logo.jpg}">
+</a>
+
+<table>
+
+    <th>Film azonosító</th>
+    <th>Szereplés azonosító</th>
+    <th>Színész azonosító</th>
+    <tr th:each="jat, iterStat: ${jatszik}">
+
+        <td th:text="${jat.fid}"></td>
+        <td th:text="${jat.kod}"></td>
+        <td th:text="${jat.szid}"></td>
+    </tr>
+
+</table>
+</body>
+</html>

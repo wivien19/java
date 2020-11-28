@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" type="text/css" href="../static/main.css" th:href="@{/main.css}"/>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Keresetek</h1>
+<h4>A színészeknek az összkeresetük.</h4>
+<a href="/" >
+    <img src="../static/images/logo.jpg"  width="60"  th:src="@{kepek/logo.jpg}">
+</a>
+<table>
+    <tr th:each="szinesz, iterStat: ${szineszek}">
+
+        <td th:text="${szinesz.nev}"></td>
+        <td th:text="${kereset[iterStat.index]}"></td>
+
+    </tr>
+
+</table>
+</body>
+</html>

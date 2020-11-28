@@ -1,0 +1,1 @@
+INSERT INTO sql7375115.napi_figura (eleresiut) VALUES ('kepek/figura.jpg');

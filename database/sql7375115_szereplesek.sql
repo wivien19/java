@@ -1,0 +1,11 @@
+INSERT INTO sql7375115.szereplesek (kod, helyszin, szerzodes_vege, fizetes) VALUES (1, 'LA', '2022-11-11', 900);
+INSERT INTO sql7375115.szereplesek (kod, helyszin, szerzodes_vege, fizetes) VALUES (2, 'New York', '2024-11-01', 800);
+INSERT INTO sql7375115.szereplesek (kod, helyszin, szerzodes_vege, fizetes) VALUES (3, 'Magyarorszag', '2023-11-04', 1000);
+INSERT INTO sql7375115.szereplesek (kod, helyszin, szerzodes_vege, fizetes) VALUES (5, 'Nemetorszag', '2020-11-20', 1000000);
+INSERT INTO sql7375115.szereplesek (kod, helyszin, szerzodes_vege, fizetes) VALUES (6, 'Anglia', '2020-11-05', 1500);
+INSERT INTO sql7375115.szereplesek (kod, helyszin, szerzodes_vege, fizetes) VALUES (7, 'Japán', '2020-10-30', 600);
+INSERT INTO sql7375115.szereplesek (kod, helyszin, szerzodes_vege, fizetes) VALUES (8, 'Uganda', '2020-06-12', 50);
+INSERT INTO sql7375115.szereplesek (kod, helyszin, szerzodes_vege, fizetes) VALUES (9, 'Gy?r', '2020-02-21', 1900);
+INSERT INTO sql7375115.szereplesek (kod, helyszin, szerzodes_vege, fizetes) VALUES (10, 'Szeged', '2020-11-27', 1100);
+INSERT INTO sql7375115.szereplesek (kod, helyszin, szerzodes_vege, fizetes) VALUES (11, 'Balaton', '2020-05-14', 2500);
+INSERT INTO sql7375115.szereplesek (kod, helyszin, szerzodes_vege, fizetes) VALUES (12, 'Berlin', '2020-11-07', 6001);

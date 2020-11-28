@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" type="text/css" href="../static/main.css" th:href="@{/main.css}"/>
+    <meta charset="UTF-8">
+    <title>Filmek</title>
+    <style>
+        #cim{
+            left: 55%;
+            position: absolute;
+        }
+        #idotartam {
+            left: 55%;
+            position: absolute;
+        }
+        #eredetinyelv {
+            left: 55%;
+            position: absolute;
+        }
+        #fkod {
+            left: 55%;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+<a href="/" >
+    <img src="../static/images/logo.jpg"  width="60"  th:src="@{kepek/logo.jpg}">
+</a>
+<a href="/jatszik2" class="hiv2">
+    Tovább a játszik táblához!
+</a>
+<h1>Filmek</h1>
+<table>
+    <th>Azonosító</th>
+    <th>Cím</th>
+    <th>Időtartam</th>
+    <th>Eredeti nyelve</th>
+    <th>Filmstúdió kódja</th>
+    <th>Törlés</th>
+    <th>Szerkesztés</th>
+<tr th:each="film : ${films}">
+
+    <td th:text="${film.fid}"></td>
+        <td th:text="${film.cim}"></td>
+    <td th:text="${film.idotartam}"></td>
+    <td th:text="${film.eredetinyelv}"></td>
+    <td th:text="${film.fkod}"></td>
+    <td>
+    <a th:href="@{/film/delete/{fid}(fid=${film.fid})}">
+        <button value="delete"> Törlés </button></a>
+    </td>
+        <td><a th:href="@{/film/edit/{fid}(fid=${film.fid})}"> Szerkesztés </a></td>
+</tr>
+</table>
+<h1>Film hozzáadása</h1>
+<form action="#" th:action="@{/film/add}" method="post">
+    <label>Cím:</label>
+        <input type="text" name="cim" id="cim"></input>
+
+    <br>
+    <label>Időtartam:</label>
+        <input type="number" name="idotartam" id="idotartam"></input>
+
+    <br>
+    <label>Eredeti nyelve: </label>
+        <input type="text" name="eredetinyelv" id="eredetinyelv"></input>
+
+    <br>
+    <label>Filmstúdió kódja: </label>
+        <input type="number" name="fkod" id="fkod"></input>
+
+    <br> <br>
+    <input type="submit" value="Hozzáad" class="altalanosGomb"></input>
+</form>
+
+</body>
+</html>

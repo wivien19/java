@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" type="text/css" href="../static/main.css" th:href="@{/main.css}"/>
+    <meta charset="UTF-8">
+    <title>Filmstúdió</title>
+    <style>
+        #hely{
+            left: 55%;
+            position: absolute;
+        }
+        #igazgato {
+            left: 55%;
+            position: absolute;
+        }
+        #alkalmazottakSzama {
+            left: 55%;
+            position: absolute;
+        }
+        #alapitasIdeje {
+            left: 55%;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+<a href="/" >
+    <img src="../static/images/logo.jpg"  width="60"  th:src="@{kepek/logo.jpg}">
+</a>
+<a href="/jatszik2" class="hiv2">
+    Tovább a játszik táblához!
+</a>
+<h1>Filmstúdiók</h1>
+<table>
+    <th>Azonosító</th>
+    <th>Név</th>
+    <th>Igazgató</th>
+    <th>Alkalmazottak száma</th>
+    <th>Alapítás ideje</th>
+    <th>Törlés</th>
+    <th>Szerkesztés</th>
+<tr th:each="film : ${filmstudiok}">
+    <td th:text="${film.fkod}"></td>
+    <td th:text="${film.hely}"></td>
+    <td th:text="${film.igazgato}"></td>
+    <td th:text="${film.alkalmazottakSzama}"></td>
+    <td th:text="${film.alapitasideje}" class="meret"></td>
+    <td>
+        <a th:href="@{filmstudiok/delete/{fkod}(fkod=${film.fkod})}">
+            <button value="delete"> Törlés </button></a>
+    </td>
+    <td><a th:href="@{filmstudiok/edit/{fkod}(fkod=${film.fkod})}"> Szerkesztés </a></td>
+</tr>
+</table>
+<h2>Filmstudió hozzáadása</h2>
+<form action="#" th:action="@{/filmstudiok/add}" method="post">
+    <label>Neve:</label>
+        <input type="text" name="hely" id="hely"></input>
+    <br>
+
+    <label>Igazgató:</label>
+        <input type="text" name="igazgato" id="igazgato"></input>
+    <br>
+
+    <label>Alkalmazottak száma:  </label>
+        <input type="number" name="alkalmazottakSzama" id="alkalmazottakSzama"></input>
+    <br>
+    <label>Alapítás ideje: </label>
+        <input type="date" name="alapitasIdeje" id="alapitasIdeje"></input>
+    <br> <br>
+    <input type="submit" value="Hozzáad" class="altalanosGomb"></input>
+</form>
+</body>
+</html>

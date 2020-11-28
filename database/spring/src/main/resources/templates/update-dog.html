@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="hu">
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <link rel="stylesheet" type="text/css" href="../static/main.css" th:href="@{/main.css}"/>
+    <title>Film módosítás</title>
+    <style>
+      #fid{
+        left: 55%;
+        position: absolute;
+      }
+    #cim{
+    left: 55%;
+    position: absolute;
+    }
+    #idotartam {
+    left: 55%;
+    position: absolute;
+    }
+    #eredetinyelv {
+    left: 55%;
+    position: absolute;
+    }
+    #fkod {
+    left: 55%;
+    position: absolute;
+    }</style>
+  </head>
+  <body>
+  <a href="/film" class="hiv">
+    Vissza
+  </a>
+  <h1>Film szerkesztése</h1>
+    <div>
+
+      <form action="#" th:action="@{/film/update/{fid}(fid=${film.fid})}" method="post">
+        <label>Cím:</label>
+        <input type="text" name="cim" id="cim" th:value="${film.cim}"></input>
+        <br>
+        <label>Időtartam:</label>
+          <input type="number" name="idotartam" id="idotartam" th:value="${film.idotartam}"></input>
+        <br>
+        <label>Eredeti nyelve: </label>
+          <input type="text" name="eredetinyelv" id="eredetinyelv" th:value="${film.eredetinyelv}"></input>
+        <br>
+        <label>Filmstúdió kódja:</label>
+          <input type="number" name="fkod" id="fkod" th:value="${film.fkod}"></input>
+        <br>
+        <br>
+        <input type="submit" value="Véglegesít" class="altalanosGomb"></input>
+      </form>
+    </div>
+  </body>
+</html>

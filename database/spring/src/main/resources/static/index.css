@@ -1,0 +1,72 @@
+body{
+    color: pink;
+    background: midnightblue;
+    text-align: center;
+    margin: auto;
+}
+.alpha {
+    color: midnightblue;
+    text-decoration: none;
+    background: blanchedalmond;
+    box-sizing:content-box;
+    margin: 100px auto;
+    width: 25%;
+    padding: 26px;
+    border:5px solid darkslateblue;
+    text-align: center;
+    font-family: "Arial Rounded MT Bold";
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+
+    font-size: 30px;
+
+}
+img {
+    position: absolute;
+    top: 4px;
+    left: 54px;
+}
+.figura {
+    position: absolute;
+    top: 100px;
+    left: 40%;
+}
+.altalanosGomb {
+    background:blanchedalmond;
+    display: block;
+    position: absolute;
+    padding: 3px;
+    width: 15%;
+    top: 65%;
+    left: 40%;
+    color: black;
+    font-family: "Arial Rounded MT Bold", Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+
+    box-sizing:content-box;
+    border:5px solid black;
+
+}
+.altalanosGomb2 {
+    background:blanchedalmond;
+    display: block;
+    position: absolute;
+    padding: 3px;
+    width: 15%;
+    top: 70%;
+    left: 40%;
+    color: black;
+    font-family: "Arial Rounded MT Bold", Helvetica, sans-serif;
+    font-size: larger;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+
+    box-sizing:content-box;
+    border:5px solid black;
+
+}

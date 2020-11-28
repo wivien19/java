@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="hu">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" type="text/css" href="../static/main.css" th:href="@{/main.css}"/>
+    <title>Filmstudió módosítás</title>
+    <style>
+        #fkod{
+            left: 55%;
+            position: absolute;
+        }
+        #hely{
+            left: 55%;
+            position: absolute;
+        }
+        #igazgato {
+            left: 55%;
+            position: absolute;
+        }
+        #alkalmazottakSzama {
+            left: 55%;
+            position: absolute;
+        }
+        #alapitasIdeje {
+            left: 55%;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+<a href="/filmstudiok" class="hiv">
+    Vissza
+</a>
+<div>
+    <h2>Filmstúdió szerkesztése</h2>
+    <form action="#" th:action="@{/filmstudiok/update/{fkod}(fkod=${filmstudio.fkod})}" method="post">
+        <label>Neve:</label>
+            <input type="text" name="hely" id="hely" th:value="${filmstudio.hely}"></input>
+        <br>
+        <label>Igazgató: </label>
+        <input type="text" name="igazgato" id="igazgato" th:value="${filmstudio.igazgato}"></input>
+        <br>
+        <label>Alkalmazottak száma:</label>
+        <input type="number" name="alkalmazottakSzama" id="alkalmazottakSzama" th:value="${filmstudio.alkalmazottakSzama}"></input>
+        <br>
+        <label>Alapítás ideje:</label>
+            <input type="date" name="alapitasIdeje" id="alapitasIdeje" th:value="${filmstudio.alapitasideje}"></input>
+        <br> <br>
+
+        <input type="submit" value="Megerősít" class="altalanosGomb"></input>
+    </form>
+</div>
+</body>
+</html>

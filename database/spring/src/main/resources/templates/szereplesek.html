@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" type="text/css" href="../static/main.css" th:href="@{/main.css}"/>
+    <meta charset="UTF-8">
+    <title>Szereplések</title>
+    <style>
+        #helyszin{
+            left: 55%;
+            position: absolute;
+        }
+        #szerzodes_vege {
+            left: 55%;
+            position: absolute;
+        }
+        #fizetes {
+            left: 55%;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+<h1>Szereplések</h1>
+<a href="/" >
+    <img src="../static/images/logo.jpg"  width="60"  th:src="@{kepek/logo.jpg}">
+</a>
+<a href="/jatszik2" class="hiv2">
+   Tovább a játszik táblához!
+</a>
+<table>
+    <th>Azonosító</th>
+    <th>Helyszín</th>
+    <th>Szerződés vége</th>
+    <th>Fizetés</th>
+    <th>Törlés</th>
+    <th>Szerkesztés</th>
+    <tr th:each="szereples : ${szereplesek}">
+        <td th:text="${szereples.kod}"></td>
+        <td th:text="${szereples.helyszin}"></td>
+        <td th:text="${szereples.szerzodes_vege}"></td>
+        <td th:text="${szereples.fizetes}"></td>
+        <td>
+            <a th:href="@{szereplesek/delete/{kod}(kod=${szereples.kod})}">
+                <button value="delete"> Törlés </button></a>
+        </td>
+        <td><a th:href="@{szereplesek/edit/{kod}(kod=${szereples.kod})}"> Szerkesztés </a></td>
+  </tr>
+</table>
+<h2>Szereplés hozzáadása</h2>
+
+<form action="#" th:action="@{/szereplesek/add}" method="post">
+    <label>Helyszín:</label>
+        <input type="text" name="helyszin" id="helyszin"></input>
+    <br>
+    <label>Szerződés vége:</label>
+        <input type="date" name="szerzodes_vege" id="szerzodes_vege"></input>
+    <br>
+    <label>Fizetés: </label>
+        <input type="number" name="fizetes" id="fizetes"></input>
+    <br>
+    <br>
+    <input type="submit" value="Hozzáad" class="altalanosGomb"></input>
+</form>
+</body>
+</html>

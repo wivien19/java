@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" type="text/css" href="../static/main.css" th:href="@{/main.css}"/>
+    <meta charset="UTF-8">
+    <title>Igazgatók</title>
+</head>
+<body>
+<a href="/" >
+    <img src="../static/images/logo.jpg"  width="60"  th:src="@{kepek/logo.jpg}">
+</a>
+<h1>Igazgatók</h1>
+<h4>Azoknak az igazgatóknak a listája, akiknek a filmstúdiójához vannak megadva színészek és 2011 után alapították. Az alkalmazottak száma szerint csökkenő sorrendben láthatóak.</h4>
+<table>
+    <tr th:each=" ig : ${igazgatok}">
+
+        <td th:text="${ig}"></td>
+
+    </tr>
+
+</table>
+</body>
+</html>

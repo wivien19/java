@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" type="text/css" href="../static/main.css" th:href="@{/index.css}"/>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <a class="alpha" href="/"> <img src="../static/kepek/logo.jpg" th:src="@{kepek/logo.jpg}" width="50"> </a>
+    <a class="alpha" th:href="@{film}"> Filmek </a>
+    <a class="alpha" th:href="@{filmstudiok}"> Filmstúdiók </a>
+    <a class="alpha" th:href="@{szinesz}"> Színészek </a>
+    <a class="alpha" th:href="@{szereplesek}"> Szereplések </a>
+    <a class="alpha" th:href="@{jatszik}"> Játszanak </a>
+    <a class="alpha" th:href="@{kereset}"> Keresetek </a>
+    <a class="alpha" th:href="@{igazgato}"> Igazgatók </a>
+  <img  src="../static/kepek/logo.jpg" width="240" th:src="@{kepek/figura.jpg}"
+           alt="Napi figura" class="figura">
+
+    <form action="#" th:action="@{/}" method="post" enctype="multipart/form-data">
+        <input type="file"  name="img" accept="image/*" class="altalanosGomb">
+        <br><br>
+        <input type="submit" value="Feltölt" class="altalanosGomb2">
+    </form>
+
+</body>
+</html>

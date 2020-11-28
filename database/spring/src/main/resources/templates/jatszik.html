@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" type="text/css" href="../static/main.css" th:href="@{/main.css}"/>
+    <meta charset="UTF-8">
+    <title>Játszanak</title>
+</head>
+<body>
+<h1>Játszanak</h1>
+<a href="/" >
+    <img src="../static/images/logo.jpg"  width="60"  th:src="@{kepek/logo.jpg}">
+</a>
+<h3>Azoknak a filmeknek a listája, ahol legalább egy színész szerepel és a film hossza legalább 120 perc. A filmek mellett az adott filmben játszó színészek száma is megtekinthető.</h3>
+<table>
+    <th>Cím</th>
+    <th>Színészek száma</th>
+    <tr th:each="film, iterStat: ${films}">
+
+
+
+        <td th:text="${film.cim}"></td>
+        <td th:text="${szinesz[iterStat.index]}"></td>
+    </tr>
+
+</table>
+</body>
+</html>

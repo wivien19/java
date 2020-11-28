@@ -1,0 +1,92 @@
+table{
+    border-collapse:collapse;
+    border: 3px solid black;
+    padding: 5px;
+    margin: 20px auto;
+    text-align: center;
+    font-family: "Arial Rounded MT Bold";
+    font-size: 20px;
+    border-radius: 10px 10px 10px 10px;
+}
+
+body{
+    color: blanchedalmond;
+    background: midnightblue;
+    text-align: center;
+
+}
+
+.altalanosGomb {
+    background:blanchedalmond;
+    display: block;
+    position: absolute;
+    padding: 3px;
+    width: 25%;
+    left: 42%;
+    color: black;
+    font-family: "Arial Rounded MT Bold", Helvetica, sans-serif;
+    font-size: larger;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+
+    box-sizing:content-box;
+    border:5px solid black;
+
+}
+a {
+    color: blanchedalmond;
+    text-decoration: none
+}
+
+button {
+    background:blanchedalmond;
+    display: block;
+    text-align: center;
+    width: 95%;
+    color: black;
+    font-family: "Arial Rounded MT Bold", Arial, sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    border:5px solid black;
+    border-radius: 5px 5px 5px 5px;
+}
+
+img {
+    position: absolute;
+    text-align: left;
+    left: 3px;
+    top: 3px;
+
+}
+th, td{
+    width: 250px;
+    border-collapse:collapse;
+    border: 3px solid black;
+    padding: 5px;
+    margin: 20px auto;
+    text-align: center;
+    font-family: "Arial Rounded MT Bold";
+    font-size: 20px;
+    border-radius: 10px 10px 10px 10px;
+}
+label {
+    font-size: 20px;
+    left: 43%;
+    position: absolute;
+}
+.hiv{
+    position: absolute;
+    text-align: left;
+    left: 3px;
+    top: 3px;
+    font-size: 30px;
+}
+.hiv2{
+    position: absolute;
+    text-align: left;
+    right: 3px;
+    top: 3px;
+    font-size: 30px;
+}

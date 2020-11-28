@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="hu">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" type="text/css" href="../static/main.css" th:href="@{/main.css}"/>
+    <title>Szinesz módosítás</title>
+    <style>
+        #szid {
+            left: 55%;
+            position: absolute;
+        }
+        #nev{
+            left: 55%;
+            position: absolute;
+        }
+        #szuletesiIdo {
+            left: 55%;
+            position: absolute;
+        }
+        #fkod {
+            left: 55%;
+            position: absolute;
+        }
+    </style>
+
+</head>
+<body>
+<a href="/szinesz" class="hiv">
+    Vissza
+</a>
+<div>
+    <h2>Színész szerkesztése</h2>
+    <form action="#" th:action="@{/szinesz/update/{szid}(szid=${szineszek.szid})}" method="post">
+        <label>Név:</label>
+            <input type="text" name="nev" id="nev" th:value="${szineszek.nev}"></input>
+        <br>
+        <label>Születési idő:</label>
+            <input type="date" name="szuletesiIdo" id="szuletesiIdo" th:value="${szineszek.szuletesiIdo}"></input>
+        <br>
+        <label>Filmstúdió kódja:</label>
+            <input type="number" name="fkod" id="fkod" th:value="${szineszek.fkod}"></input>
+        <br> <br>
+
+
+        <input type="submit" value="Megerősít" class="altalanosGomb"></input>
+    </form>
+</div>
+</body>
+</html>

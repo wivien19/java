@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" type="text/css" href="../static/main.css" th:href="@{/main.css}"/>
+    <meta charset="UTF-8">
+    <title>Színész</title>
+    <style>
+        #nev{
+            left: 55%;
+            position: absolute;
+        }
+        #szuletesiIdo {
+            left: 55%;
+            position: absolute;
+        }
+        #fkod {
+            left: 55%;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+<a href="/" >
+    <img src="../static/images/logo.jpg"  width="60"  th:src="@{kepek/logo.jpg}">
+</a>
+<a href="/jatszik2" class="hiv2">
+    Tovább a játszik táblához!
+</a>
+<h1>Színészek</h1>
+<table>
+    <th>Azonosító</th>
+    <th>Név</th>
+    <th>Születési idő</th>
+    <th>Filmstúdió kód</th>
+    <th>Törlés</th>
+    <th>Szerkesztés</th>
+
+    <tr th:each="szinesz : ${szineszek}">
+        <td th:text="${szinesz.szid}"></td>
+        <td th:text="${szinesz.nev}"></td>
+        <td th:text="${szinesz.szuletesiIdo}"></td>
+        <td th:text="${szinesz.fkod}"></td>
+      <td>
+        <a th:href="@{szinesz/delete/{szid}(szid=${szinesz.szid})}">
+               <button value="delete"> Törlés </button></a>
+        </td>
+        <td><a th:href="@{szinesz/edit/{szid}(szid=${szinesz.szid})}"> Szerkesztés </a></td>
+         </tr>
+</table>
+<h2>Színész hozzáadása</h2>
+
+<form action="#" th:action="@{/szinesz/add}" method="post">
+    <label>Név: </label>
+        <input type="text" name="nev" id="nev"></input>
+    <br>
+
+    <label>Születési ideje:</label>
+        <input type="date" name="szuletesiIdo" id="szuletesiIdo"></input>
+    <br>
+    <label>Filmstúdió kódja:</label>
+    <input type="number" name="fkod" id="fkod"></input>
+    <br>   <br>
+    <input type="submit" value="Hozzáad" class="altalanosGomb"></input>
+
+
+</form>
+</body>
+</html>
